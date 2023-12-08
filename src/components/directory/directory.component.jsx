@@ -1,13 +1,46 @@
 import DirectoryItem from '../directory-item/directory-item.component';
-import './directory.styles.scss';
+import { DirectoryContainer } from './directory.styles.jsx';
 
-const Directory = ({categories}) => {
+const categories = [
+  {
+    id: 1,
+    title: 'hats',
+    imageUrl: '/images/hats.webp',
+    route: 'shop/hats'
+  },
+  {
+    id: 2,
+    title: 'jackets',
+    imageUrl: '/images/jackets.webp',
+    route: 'shop/jackets'
+  },
+  {
+    id: 3,
+    title: 'footwear',
+    imageUrl: '/images/footwear.webp',
+    route: 'shop/footwear'
+  },
+  {
+    id: 4,
+    title: 'womens',
+    imageUrl: '/images/womens.webp',
+    route: 'shop/womens'
+  },
+  {
+    id: 5,
+    title: 'mens',
+    imageUrl: '/images/mens.webp',
+    route: 'shop/mens'
+  },
+];
+
+const Directory = () => {
   return (
-    <div className="directory-container">
+    <DirectoryContainer>
       {categories.map((category) => (
         <DirectoryItem key={category.id} category={category} />
       ))}
-    </div>
+    </DirectoryContainer>
   );
 };
 

@@ -5,11 +5,12 @@ import App from "./App"
 import { UserProvider } from "./contexts/user.context";
 import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
-import "./index.scss"
+import GlobalStyles from "./index.jsx"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
+    <GlobalStyles />
     <BrowserRouter>
       <UserProvider>
         <CategoriesProvider>
